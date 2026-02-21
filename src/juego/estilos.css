@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "KiwiSoda";
+    src: url("font/KiwiSoda.ttf");
+}
+
+.boton-iniciar {
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "KiwiSoda";
+    -fx-text-fill: black;
+    -fx-font-size: 25px;
+    -fx-alignment: center;
+    -fx-padding: -5 0 5 0;  
+}
+
+.boton-iniciar:hover {
+
+    -fx-text-fill: white;
+}
+
+.boton-iniciar:pressed {
+
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
