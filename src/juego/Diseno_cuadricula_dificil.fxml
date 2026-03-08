@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="1295.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25">
+   <children>
+      <ImageView fitHeight="731.0" fitWidth="1295.0" pickOnBounds="true" preserveRatio="true" styleClass="label-reiniciar">
+         <image>
+            <Image url="@../imagen/cuadricula-dificil.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1015.0" layoutY="379.0" text="Reiniciar">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

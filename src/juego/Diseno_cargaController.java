@@ -15,7 +15,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Controller implements Initializable {
+public class Diseno_cargaController implements Initializable {
 
     @FXML
     private Button botonIniciar;
