@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="1294.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25">
+<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_cuadricula_medioController">
    <children>
       <ImageView fitHeight="730.0" fitWidth="1294.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagen/cuadricula-medio.png" />
          </image>
       </ImageView>
-      <Label fx:id="labelReiniciar" layoutX="995.0" layoutY="639.0" prefHeight="53.0" prefWidth="185.0" styleClass="label-reiniciar" text="Reiniciar">
+      <Button fx:id="botonReiniciar" layoutX="932.0" layoutY="633.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="279.0" styleClass="boton-reiniciar" text="Reiniciar">
          <font>
-            <Font size="36.0" />
+            <Font size="30.0" />
          </font>
-      </Label>
+      </Button>
+      <TextField fx:id="cuadroM1" layoutX="99.0" layoutY="125.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM2" layoutX="258.0" layoutY="131.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM3" layoutX="426.0" layoutY="131.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM4" layoutX="585.0" layoutY="140.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM5" layoutX="99.0" layoutY="231.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM6" layoutX="251.0" layoutY="236.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM7" layoutX="426.0" layoutY="236.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM8" layoutX="579.0" layoutY="245.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM9" layoutX="99.0" layoutY="398.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM10" layoutX="258.0" layoutY="405.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM11" layoutX="426.0" layoutY="405.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM12" layoutX="585.0" layoutY="413.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM13" layoutX="93.0" layoutY="504.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM14" layoutX="251.0" layoutY="504.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM15" layoutX="420.0" layoutY="509.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroM16" layoutX="579.0" layoutY="522.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroMR1" layoutX="817.0" layoutY="146.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroMR2" layoutX="817.0" layoutY="245.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroMR3" layoutX="817.0" layoutY="422.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroMR4" layoutX="811.0" layoutY="522.0" prefHeight="60.0" prefWidth="68.0" styleClass="cuadro-cuadricula" />
    </children>
 </AnchorPane>

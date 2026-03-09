@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="1295.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25">
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="1295.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_cuadricula_dificilController">
    <children>
       <ImageView fitHeight="731.0" fitWidth="1295.0" pickOnBounds="true" preserveRatio="true" styleClass="label-reiniciar">
          <image>
             <Image url="@../imagen/cuadricula-dificil.png" />
          </image>
       </ImageView>
-      <Label layoutX="1015.0" layoutY="379.0" text="Reiniciar">
+      <Button fx:id="botonReiniciar" layoutX="926.0" layoutY="366.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="323.0" styleClass="boton-reiniciar" text="Reiniciar" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
-      </Label>
+      </Button>
+      <TextField fx:id="cuadroD1" layoutX="94.0" layoutY="66.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD2" layoutX="222.0" layoutY="74.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD3" layoutX="363.0" layoutY="74.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD4" layoutX="494.0" layoutY="80.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD5" layoutX="94.0" layoutY="152.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD6" layoutX="222.0" layoutY="158.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD7" layoutX="363.0" layoutY="158.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD8" layoutX="488.0" layoutY="167.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD9" layoutX="94.0" layoutY="296.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD10" layoutX="222.0" layoutY="296.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD11" layoutX="363.0" layoutY="306.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD12" layoutX="488.0" layoutY="306.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD13" layoutX="94.0" layoutY="379.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD14" layoutX="216.0" layoutY="385.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD15" layoutX="363.0" layoutY="385.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD16" layoutX="488.0" layoutY="391.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD17" layoutX="94.0" layoutY="519.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD18" layoutX="222.0" layoutY="527.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD19" layoutX="363.0" layoutY="533.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD20" layoutX="494.0" layoutY="533.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD21" layoutX="94.0" layoutY="612.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD22" layoutX="222.0" layoutY="612.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD23" layoutX="363.0" layoutY="618.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroD24" layoutX="488.0" layoutY="624.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR1" layoutX="686.0" layoutY="86.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR6" layoutX="686.0" layoutY="624.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR5" layoutX="686.0" layoutY="545.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR4" layoutX="677.0" layoutY="391.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR3" layoutX="677.0" layoutY="314.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
+      <TextField fx:id="cuadroDR2" layoutX="686.0" layoutY="167.0" prefHeight="52.0" prefWidth="56.0" styleClass="cuadro-cuadricula" />
    </children>
 </AnchorPane>

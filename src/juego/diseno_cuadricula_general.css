@@ -1,0 +1,36 @@
+.boton-reiniciar {
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "KiwiSoda";
+    -fx-text-fill: black;
+    -fx-font-size: 36px;
+    -fx-alignment: center;
+    -fx-padding: -5 0 5 0;  
+}
+
+.boton-reiniciar:hover {
+
+    -fx-text-fill: white;
+}
+
+.boton-reiniciar:pressed {
+
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.cuadro-cuadricula{
+
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+
+}
+
+.cuadro-cuadricula:focused {
+
+    -fx-border-color: gold;
+
+}
+
