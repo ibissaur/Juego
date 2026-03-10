@@ -4,13 +4,18 @@
  */
 package juego;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.RotateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -35,6 +40,7 @@ public class Diseno_menuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         RotateTransition r = new RotateTransition(Duration.millis(200), labelMensaje);
         r.setToAngle(10);
 
@@ -43,6 +49,24 @@ public class Diseno_menuController implements Initializable {
 
         labelMensaje.setOnMouseEntered(e -> r.playFromStart());
         labelMensaje.setOnMouseExited(e -> back.playFromStart());
+
+        botonJuego.setOnAction(event -> {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Diseno_cuadricula_facil.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) botonJuego.getScene().getWindow();
+                Scene scene = new Scene(root);
+
+                stage.setScene(scene);
+
+            } catch (IOException e) {
+                System.out.print("Error cargando la cuadricula del juego");
+            }
+
+        });
+
     }
 
 }

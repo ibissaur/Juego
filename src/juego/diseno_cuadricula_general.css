@@ -6,7 +6,7 @@
     -fx-text-fill: black;
     -fx-font-size: 36px;
     -fx-alignment: center;
-    -fx-padding: -5 0 5 0;  
+    -fx-padding: -5 0 5 0;
 }
 
 .boton-reiniciar:hover {
@@ -25,6 +25,9 @@
     -fx-background-color: transparent;
     -fx-border-color: black;
     -fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
 
 }
 
@@ -32,5 +35,21 @@
 
     -fx-border-color: gold;
 
+}
+
+.correcto {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.incorrecto {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
 }
 

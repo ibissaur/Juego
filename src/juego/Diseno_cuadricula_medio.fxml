@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_cuadricula_medioController">
+<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="1294.0" stylesheets="@diseno_cuadricula_general.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_cuadricula_medioController">
    <children>
       <ImageView fitHeight="730.0" fitWidth="1294.0" pickOnBounds="true" preserveRatio="true">
          <image>
