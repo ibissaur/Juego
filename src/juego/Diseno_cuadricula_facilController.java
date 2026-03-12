@@ -61,8 +61,17 @@ public class Diseno_cuadricula_facilController implements Initializable {
             TextField[] cuadros = {cuadroF1, cuadroF2, cuadroF3, cuadroF4, cuadroF5, cuadroF6, cuadroF7, cuadroF8};
 
             for (int i = 0; i < cuadros.length; i++) {
-                num.validarNumero(cuadros[i], i);
+
+                if (cuadros[i].getText().equalsIgnoreCase("")) {
+                    System.out.println("Ya la tabla esta reiniciada");
+                    return;
+                }
+                cuadros[i].setText("");
+                cuadros[i].setEditable(true);
             }
+
+            num.setPuntaje(0);
+            System.out.println(num.getPuntaje());
 
         });
 
