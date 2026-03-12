@@ -1,21 +1,17 @@
 package juego;
 
+import javafx.scene.control.TextField;
+
 public class Numeros {
 
-    private int numero;
-    int numCorrectos[] = new int[8];
-
-    public Numeros(int numero) {
-        this.numero = numero;
-        InMatriz();
-    }
+    private int numCorrectos[];
 
     public Numeros() {
+        numCorrectos = new int[8];
         InMatriz();
     }
 
     public void InMatriz() {
-        int numCorrectos[] = new int[8];
 
         numCorrectos[0] = 1;
         numCorrectos[1] = 2;
@@ -31,17 +27,49 @@ public class Numeros {
         return numCorrectos;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
     public void setNumCorrectos(int[] numCorrectos) {
         this.numCorrectos = numCorrectos;
     }
 
-    public void verificarResultado(int numero1, int numero2, int numero3, int numero4, int numero5, int numero6,
-            int numero7, int numero8) {
+    public void validarNumero(TextField campo, int posicionNum) {
 
+        if (posicionNum < 0 || posicionNum >= numCorrectos.length) {
+            System.out.println("Ha ocurrido un error. El Indice esta afuera de rango");
+            return;
+        }
+
+        campo.textProperty().addListener((obs, oldValue, newValue) -> {
+
+            if (!newValue.matches("\\d*")) {
+                campo.setText(newValue.replaceAll("[^\\d]", ""));
+                return;
+            }
+
+            if (newValue.isEmpty()) {
+                campo.getStyleClass().removeAll("correcto", "incorrecto");
+                return;
+            }
+
+            if (newValue.length() > 2) {
+                campo.setText(oldValue);
+                return;
+            }
+
+            int numero = Integer.parseInt(newValue);
+
+            if (numero == numCorrectos[posicionNum]) {
+
+                campo.getStyleClass().removeAll("incorrecto");
+                campo.getStyleClass().add("correcto");
+
+            } else {
+
+                campo.getStyleClass().removeAll("correcto");
+                campo.getStyleClass().add("incorrecto");
+
+            }
+
+        });
     }
 
 }
