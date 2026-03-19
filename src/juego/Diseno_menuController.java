@@ -41,19 +41,17 @@ public class Diseno_menuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        RotateTransition r = new RotateTransition(Duration.millis(200), labelMensaje);
-        r.setToAngle(10);
+        animacionEtiquetas();
+        CargarVentana();
 
-        RotateTransition back = new RotateTransition(Duration.millis(200), labelMensaje);
-        back.setToAngle(0);
+    }
 
-        labelMensaje.setOnMouseEntered(e -> r.playFromStart());
-        labelMensaje.setOnMouseExited(e -> back.playFromStart());
+    private void CargarVentana() {
 
         botonJuego.setOnAction(event -> {
 
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Diseno_cuadricula_facil.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Ventana_dificultad.fxml"));
                 Parent root = loader.load();
 
                 Stage stage = (Stage) botonJuego.getScene().getWindow();
@@ -66,6 +64,19 @@ public class Diseno_menuController implements Initializable {
             }
 
         });
+
+    }
+
+    private void animacionEtiquetas() {
+
+        RotateTransition r = new RotateTransition(Duration.millis(200), labelMensaje);
+        r.setToAngle(10);
+
+        RotateTransition back = new RotateTransition(Duration.millis(200), labelMensaje);
+        back.setToAngle(0);
+
+        labelMensaje.setOnMouseEntered(e -> r.playFromStart());
+        labelMensaje.setOnMouseExited(e -> back.playFromStart());
 
     }
 

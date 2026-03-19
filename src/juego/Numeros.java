@@ -90,6 +90,10 @@ public class Numeros {
                     System.out.println(Puntaje);
                     campo.getStyleClass().removeAll("correcto");
                     campo.getStyleClass().add("incorrecto");
+                } else {
+                    System.out.println(Puntaje);
+                    campo.getStyleClass().removeAll("correcto");
+                    campo.getStyleClass().add("incorrecto");
                 }
 
             }
