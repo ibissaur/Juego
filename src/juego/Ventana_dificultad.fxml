@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="843.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Ventana_dificultadController">
+<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="843.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Ventana_dificultadController">
     <stylesheets>
         <URL value="@ventana_dificultad.css" />
     </stylesheets>
@@ -19,5 +19,6 @@
       <Button fx:id="Boton_facil" layoutX="254.0" layoutY="253.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="312.0" styleClass="boton-dif" text="Fácil" />
       <Button fx:id="Boton_medio" layoutX="254.0" layoutY="379.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="312.0" styleClass="boton-dif" text="Medio" />
       <Button fx:id="Boton_dificil" layoutX="254.0" layoutY="502.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="312.0" styleClass="boton-dif" text="Dificil" />
+      <Button fx:id="botonRegresar" layoutX="372.0" layoutY="589.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="76.0" styleClass="boton-imagen" />
    </children>
 </AnchorPane>

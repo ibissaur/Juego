@@ -56,8 +56,9 @@ public class Diseno_menuController implements Initializable {
 
                 Stage stage = (Stage) botonJuego.getScene().getWindow();
                 Scene scene = new Scene(root);
-
                 stage.setScene(scene);
+                stage.setTitle("Dificultades");
+                stage.centerOnScreen();
 
             } catch (IOException e) {
                 System.out.print("Error cargando la cuadricula del juego");

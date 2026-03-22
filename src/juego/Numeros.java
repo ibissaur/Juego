@@ -1,7 +1,5 @@
 package juego;
 
-import javafx.scene.control.TextField;
-
 public class Numeros {
 
     private int numCorrectos[];
@@ -49,56 +47,14 @@ public class Numeros {
         this.Puntaje -= Puntaje;
     }
 
-    public void validarNumero(TextField campo, int posicionNum) {
+    public boolean validarNumero(int numero, int posicionNum) {
 
         if (posicionNum < 0 || posicionNum >= numCorrectos.length) {
-            System.out.println("Ha ocurrido un error. El Indice esta afuera de rango");
-            return;
+            System.out.println("Índice fuera de rango");
+            return false;
         }
 
-        campo.textProperty().addListener((obs, oldValue, newValue) -> {
-
-            if (!newValue.matches("\\d*")) {
-                campo.setText(newValue.replaceAll("[^\\d]", ""));
-                return;
-            }
-
-            if (newValue.isEmpty()) {
-                campo.getStyleClass().removeAll("correcto", "incorrecto");
-                return;
-            }
-
-            if (newValue.length() > 2) {
-                campo.setText(oldValue);
-                return;
-            }
-
-            int numero = Integer.parseInt(newValue);
-
-            if (numero == numCorrectos[posicionNum]) {
-
-                campo.getStyleClass().removeAll("incorrecto");
-                campo.getStyleClass().add("correcto");
-                setPuntajeAcunmulado(1);
-                System.out.println(Puntaje);
-                campo.setEditable(false);
-
-            } else {
-
-                if (Puntaje != 0) {
-                    eliminarPuntaje(1);
-                    System.out.println(Puntaje);
-                    campo.getStyleClass().removeAll("correcto");
-                    campo.getStyleClass().add("incorrecto");
-                } else {
-                    System.out.println(Puntaje);
-                    campo.getStyleClass().removeAll("correcto");
-                    campo.getStyleClass().add("incorrecto");
-                }
-
-            }
-
-        });
+        return numero == numCorrectos[posicionNum];
     }
 
 }

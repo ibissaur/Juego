@@ -7,6 +7,8 @@ package juego;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -45,8 +48,8 @@ public class Diseno_cuadricula_facilController implements Initializable {
     private TextField cuadroFR2;
     @FXML
     private Button botonReiniciar;
-
-    private Numeros num = new Numeros();
+    @FXML
+    private Button botonRegresar;
 
     /**
      * Initializes the controller class.
@@ -54,11 +57,12 @@ public class Diseno_cuadricula_facilController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        inicializarCuadros();
+        Numeros num = new Numeros();
+        TextField[] cuadros = {cuadroF1, cuadroF2, cuadroF3, cuadroF4, cuadroF5, cuadroF6, cuadroF7, cuadroF8};
+
+        ValidacionRespuestas(num, cuadros);
 
         botonReiniciar.setOnAction(event -> {
-
-            TextField[] cuadros = {cuadroF1, cuadroF2, cuadroF3, cuadroF4, cuadroF5, cuadroF6, cuadroF7, cuadroF8};
 
             for (int i = 0; i < cuadros.length; i++) {
 
@@ -75,19 +79,103 @@ public class Diseno_cuadricula_facilController implements Initializable {
 
         });
 
+        botonRegresar.setOnAction(event -> {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Diseno_menu.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) botonRegresar.getScene().getWindow();
+                Scene scene = new Scene(root);
+
+                stage.setScene(scene);
+                stage.centerOnScreen();
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
+            } catch (IOException e) {
+                System.out.print("\nError cargando la ventana Diseno_menu");
+            }
+
+        });
+
     }
 
-    private void inicializarCuadros() {
+    private void ValidacionRespuestas(Numeros num, TextField cuadros[]) {
 
-        num.validarNumero(cuadroF1, 0);
-        num.validarNumero(cuadroF2, 1);
-        num.validarNumero(cuadroF3, 2);
-        num.validarNumero(cuadroF4, 3);
-        num.validarNumero(cuadroF5, 4);
-        num.validarNumero(cuadroF6, 5);
-        num.validarNumero(cuadroF7, 6);
-        num.validarNumero(cuadroF8, 7);
+        for (int i = 0; i < cuadros.length; i++) {
 
+            final int indice = i;
+            TextField campo = cuadros[i];
+
+            campo.textProperty().addListener((obs, oldValue, newValue) -> {
+
+                if (!newValue.matches("\\d*")) {
+                    campo.setText(newValue.replaceAll("[^\\d]", ""));
+                    return;
+                }
+
+                if (newValue.isEmpty()) {
+                    campo.getStyleClass().removeAll("correcto", "incorrecto");
+                    return;
+                }
+
+                if (newValue.length() > 2) {
+                    campo.setText(oldValue);
+                    return;
+                }
+
+                int numero;
+
+                try {
+                    numero = Integer.parseInt(newValue);
+                } catch (NumberFormatException e) {
+                    return;
+                }
+
+                if (num.validarNumero(numero, indice)) {
+
+                    campo.getStyleClass().removeAll("incorrecto");
+                    campo.getStyleClass().add("correcto");
+                    campo.setEditable(false);
+
+                    num.setPuntajeAcunmulado(1);
+                    System.out.println(num.getPuntaje());
+
+                } else {
+
+                    if (newValue.length() > 1 || oldValue.length() > 1) {
+                        return;
+                    }
+
+                    if (num.getPuntaje() != 0) {
+
+                        num.eliminarPuntaje(1);
+                        System.out.println(num.getPuntaje());
+                        campo.getStyleClass().removeAll("correcto");
+                        campo.getStyleClass().add("incorrecto");
+
+                    } else {
+
+                        campo.getStyleClass().removeAll("correcto");
+                        campo.getStyleClass().add("incorrecto");
+
+                    }
+
+                }
+            });
+        }
     }
 
 }

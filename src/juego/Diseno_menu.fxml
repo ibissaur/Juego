@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="1297.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_menuController">
+<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="1297.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Diseno_menuController">
     <stylesheets>
         <URL value="@diseno_menu.css" />
     </stylesheets>
@@ -20,5 +20,6 @@
       <Button fx:id="botonJuego" layoutX="435.0" layoutY="280.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="221.0" rotate="1.0" styleClass="boton-juego" text="Iniciar Juego" />
       <Button fx:id="botonSalir" layoutX="435.0" layoutY="379.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="221.0" rotate="2.0" styleClass="boton-salir" text="Salir" />
       <Label fx:id="labelMensaje" layoutX="899.0" layoutY="525.0" prefHeight="63.0" prefWidth="250.0" styleClass="label-mensaje" text="Bienvenido" textAlignment="CENTER" />
+      <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="164.0" styleClass="boton-imagenConf" />
    </children>
 </AnchorPane>

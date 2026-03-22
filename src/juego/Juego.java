@@ -19,18 +19,16 @@ public class Juego extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Parent root = FXMLLoader.load(
-                getClass().getResource("/juego/Diseno_carga.fxml")
-        );
+        Parent root = FXMLLoader.load(getClass().getResource("/juego/Diseno_carga.fxml"));
 
         Scene scene = new Scene(root);
 
-        scene.getStylesheets().add(
-                getClass().getResource("/juego/diseno_carga.css").toExternalForm()
-        );
+        scene.getStylesheets().add(getClass().getResource("/juego/diseno_carga.css").toExternalForm());
 
-        primaryStage.setTitle("Turip");
+        primaryStage.setTitle("Iniciar juego");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.centerOnScreen();
         primaryStage.show();
     }
 
