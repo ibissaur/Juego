@@ -20,6 +20,6 @@
       <Button fx:id="botonJuego" layoutX="435.0" layoutY="280.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="221.0" rotate="1.0" styleClass="boton-juego" text="Iniciar Juego" />
       <Button fx:id="botonSalir" layoutX="435.0" layoutY="379.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="221.0" rotate="2.0" styleClass="boton-salir" text="Salir" />
       <Label fx:id="labelMensaje" layoutX="899.0" layoutY="525.0" prefHeight="63.0" prefWidth="250.0" styleClass="label-mensaje" text="Bienvenido" textAlignment="CENTER" />
-      <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="164.0" styleClass="boton-imagenConf" />
+      <Button fx:id="botonConfig" layoutX="27.0" layoutY="26.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="164.0" styleClass="boton-imagenConf" />
    </children>
 </AnchorPane>

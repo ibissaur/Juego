@@ -31,6 +31,8 @@ public class Diseno_menuController implements Initializable {
     private Button botonSalir;
     @FXML
     private Label labelMensaje;
+    @FXML
+    private Button botonConfig;
 
     /**
      * Initializes the controller class.
@@ -62,6 +64,24 @@ public class Diseno_menuController implements Initializable {
 
             } catch (IOException e) {
                 System.out.print("Error cargando la cuadricula del juego");
+            }
+
+        });
+
+        botonConfig.setOnAction(event -> {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Diseno_config.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) botonConfig.getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("Configuración");
+                stage.centerOnScreen();
+
+            } catch (IOException e) {
+                System.out.print("Error cargando la configuracion");
             }
 
         });
