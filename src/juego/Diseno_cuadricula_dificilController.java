@@ -103,16 +103,28 @@ public class Diseno_cuadricula_dificilController implements Initializable {
         ValidacionRespuestas(num, cuadros);
 
         botonReiniciar.setOnAction(event -> {
+            boolean todoVacio = true;
+
+            for (int i = 0; i < cuadros.length; i++) {
+                if (!cuadros[i].getText().isEmpty()) {
+                    todoVacio = false;
+                    break;
+                }
+            }
+
+            if (todoVacio) {
+                System.out.println("Ya está reiniciado");
+                return;
+            }
 
             for (int i = 0; i < cuadros.length; i++) {
 
-                if (cuadros[i].getText().equalsIgnoreCase("")) {
-                    System.out.println("Ya la tabla esta reiniciada");
-                    return;
-                }
                 cuadros[i].setText("");
                 cuadros[i].setEditable(true);
+
             }
+
+            System.out.println("Reiniciado correctamente");
 
             num.setPuntaje(0);
             System.out.println(num.getPuntaje());

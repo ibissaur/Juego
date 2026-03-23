@@ -78,27 +78,38 @@ public class Diseno_cuadricula_medioController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         Numeros num = new Numeros();
-        TextField[] cuadros = {cuadroM1, cuadroM2, cuadroM3, cuadroM4, cuadroM5, cuadroM6, cuadroM7, cuadroM8, cuadroM9, cuadroM10, cuadroM11, cuadroM12, cuadroM13, cuadroM14, cuadroM15,cuadroM16};
+        TextField[] cuadros = {cuadroM1, cuadroM2, cuadroM3, cuadroM4, cuadroM5, cuadroM6, cuadroM7, cuadroM8, cuadroM9, cuadroM10, cuadroM11, cuadroM12, cuadroM13, cuadroM14, cuadroM15, cuadroM16};
 
         ValidacionRespuestas(num, cuadros);
 
         botonReiniciar.setOnAction(event -> {
 
+            boolean todoVacio = true;
+
+            for (int i = 0; i < cuadros.length; i++) {
+                if (!cuadros[i].getText().isEmpty()) {
+                    todoVacio = false;
+                    break;
+                }
+            }
+
+            if (todoVacio) {
+                System.out.println("Ya está reiniciado");
+                return;
+            }
+
             for (int i = 0; i < cuadros.length; i++) {
 
-                if (cuadros[i].getText().equalsIgnoreCase("")) {
-                    System.out.println("Ya la tabla esta reiniciada");
-                    return;
-                }
                 cuadros[i].setText("");
                 cuadros[i].setEditable(true);
             }
 
+            System.out.println("Reiniciado correctamente");
             num.setPuntaje(0);
             System.out.println(num.getPuntaje());
 
         });
-        
+
         botonRegresar.setOnAction(event -> {
 
             try {
