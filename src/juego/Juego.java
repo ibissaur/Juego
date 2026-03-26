@@ -8,11 +8,14 @@ package juego;
  *
  * @author Gamer
  */
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class Juego extends Application {
 
@@ -24,6 +27,19 @@ public class Juego extends Application {
         Scene scene = new Scene(root);
 
         scene.getStylesheets().add(getClass().getResource("/juego/diseno_carga.css").toExternalForm());
+
+        FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+
+        ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+        zoom.setFromX(0.8);
+        zoom.setFromY(0.8);
+        zoom.setToX(1);
+        zoom.setToY(1);
+
+        fade.play();
+        zoom.play();
 
         primaryStage.setTitle("Iniciar juego");
         primaryStage.setScene(scene);

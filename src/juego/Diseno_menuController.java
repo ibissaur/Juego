@@ -7,7 +7,9 @@ package juego;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.FadeTransition;
 import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -60,6 +62,20 @@ public class Diseno_menuController implements Initializable {
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.setTitle("Dificultades");
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
                 stage.centerOnScreen();
 
             } catch (IOException e) {
@@ -78,6 +94,20 @@ public class Diseno_menuController implements Initializable {
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.setTitle("Configuración");
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
                 stage.centerOnScreen();
 
             } catch (IOException e) {

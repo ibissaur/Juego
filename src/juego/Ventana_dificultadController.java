@@ -60,6 +60,20 @@ public class Ventana_dificultadController implements Initializable {
 
                 stage.setScene(scene);
                 stage.setTitle("Cuadricula: dificultad facil");
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
                 stage.centerOnScreen();
 
             } catch (IOException e) {
@@ -79,6 +93,20 @@ public class Ventana_dificultadController implements Initializable {
 
                 stage.setScene(scene);
                 stage.setTitle("Cuadricula: dificultad medio");
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
                 stage.centerOnScreen();
 
             } catch (IOException e) {
@@ -98,6 +126,20 @@ public class Ventana_dificultadController implements Initializable {
 
                 stage.setScene(scene);
                 stage.setTitle("Cuadricula: dificultad dificil");
+
+                FadeTransition fade = new FadeTransition(Duration.seconds(0.5), root);
+                fade.setFromValue(0);
+                fade.setToValue(1);
+
+                ScaleTransition zoom = new ScaleTransition(Duration.seconds(0.5), root);
+                zoom.setFromX(0.8);
+                zoom.setFromY(0.8);
+                zoom.setToX(1);
+                zoom.setToY(1);
+
+                fade.play();
+                zoom.play();
+
                 stage.centerOnScreen();
 
             } catch (IOException e) {
